@@ -5,6 +5,9 @@ const withTM = require("next-transpile-modules")([
   "react-native-vector-icons",
   "@react-native-community/toolbar-android",
   "react-native",
+  "react-native-paper",
+  "react-native-iphone-x-helper",
+  "react-native-safe-area-view"
 ]);
 
 const withPlugins = require("next-compose-plugins");
@@ -21,6 +24,10 @@ let nextOptions = {
       "react-native/Libraries/Components/UnimplementedViews/UnimplementedView$":
         "react-native-web/dist/modules/UnimplementedView",
     };
+    config.module.rules.push({
+      test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/,
+      loader: "file-loader",
+    });
     return config;
   },
 };
