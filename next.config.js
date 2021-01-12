@@ -5,6 +5,7 @@ const withTM = require("next-transpile-modules")([
   "react-native-vector-icons",
   "@react-native-community/toolbar-android",
   "react-native",
+  "@bit"
 ]);
 
 const withPlugins = require("next-compose-plugins");

@@ -6,6 +6,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@bit/nicolaslazzos.test.input-container": "file:./components/input-container",
+    "@bit/nicolaslazzos.test.text-input": "file:./components/text-input",
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
     "@react-native-community/toolbar-android": "0.1.0-rc.2",
     "material-bread": "^0.2.10",
     "next": "9.5.2",
@@ -17,6 +21,21 @@
     "react-native": "^0.63.3",
     "react-native-svg-web": "1.0.5",
     "react-native-vector-icons": "7.1.0",
-    "react-native-web": "0.11.7"
+    "react-native-web": "0.11.7",
+    "react-resize-detector": "^6.0.1-rc.1"
+  },
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/react-native@1.0.25"
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
+  },
+  "peerDependencies": {
+    "material-bread": "^0.2.10",
+    "react": "17.0.1",
+    "react-native": "^0.63.3",
+    "react-native-vector-icons": "7.1.0",
+    "@react-native-community/toolbar-android": "0.1.0-rc.2"
   }
 }

@@ -1,0 +1,24 @@
+{
+  "name": "@bit/nicolaslazzos.test.input-container",
+  "version": "1.0.1",
+  "homepage": "https://bit.dev/nicolaslazzos/test/input-container",
+  "main": "dist/InputContainer.js",
+  "componentId": {
+    "scope": "nicolaslazzos.test",
+    "name": "input-container",
+    "version": "1.0.1"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {
+    "material-bread": "^0.2.10",
+    "react": "17.0.1",
+    "react-native": "^0.63.3"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/react@1.0.21"
+    }
+  }
+}
