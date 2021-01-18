@@ -12,7 +12,7 @@ import { View, StyleSheet } from "react-native";
 // }
 
 const Col = ({ style, children, size, ...props }) => (
-  <View style={StyleSheet.flatten([styles.col, styles[`col_${props[size] ?? 12}`], style])}>{children}</View>
+  <View style={[styles.col, styles[`col_${props[size] ?? 12}`], style]}>{children}</View>
 );
 
 const colWidth = 100 / 12;

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { View, Text } from "react-native";
-import { IconButton } from "material-bread";
 
 export default function InputContainer(props) {
   // color
@@ -34,27 +33,7 @@ export default function InputContainer(props) {
     <View style={props.containerStyle}>
       <View style={{ ...styles.inputContainerStyle, display: 'inline-grid' }}>
         <View style={{ ...styles.inputBorderStyle, ...borderStyle }}>
-          {!!props.iconLeft && (
-            <View style={{ ...styles.iconContainerStyle, paddingLeft: 10 }}>
-              <IconButton
-                size={28}
-                color={color}
-                {...props.iconLeft}
-                onPress={() => !props.disabled && props.iconLeft?.onPress?.()}
-              />
-            </View>
-          )}
           {props.children}
-          {!!props.iconRight && (
-            <View style={{ ...styles.iconContainerStyle, paddingRight: 10 }}>
-              <IconButton
-                size={28}
-                color={color}
-                {...props.iconRight}
-                onPress={() => !props.disabled && props.iconRight?.onPress?.()}
-              />
-            </View>
-          )}
         </View>
         {!!props.errorMessage && (
           <Text style={{ ...styles.textStyle, ...styles.errorMessageStyle }}>{props.errorMessage}</Text>

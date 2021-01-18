@@ -1,6 +1,5 @@
 import React from "react";
 import { Platform, View, Text } from "react-native";
-import { Snackbar, IconButton } from "material-bread";
 
 export default class SimpleSnackbar extends React.Component {
   state = {

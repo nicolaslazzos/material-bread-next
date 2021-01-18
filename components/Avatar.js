@@ -1,7 +1,5 @@
 import React, { PureComponent } from "react";
 
-import { Avatar as BreadAvatar } from "material-bread";
-
 import { Image, View, Text, TouchableWithoutFeedback } from "react-native";
 
 // export interface IAvatarProps {

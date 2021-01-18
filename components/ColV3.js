@@ -12,10 +12,9 @@ import { View, StyleSheet } from "react-native";
 // }
 
 const getSize = (width) => {
-  // const getSize = (width: number) => {
   if (!width) return;
 
-  let size = "xl";
+  let size;
 
   if (width > 0 && width <= 600) {
     size = "xs";
@@ -25,11 +24,9 @@ const getSize = (width) => {
     size = "md";
   } else if (width > 1280 && width <= 1920) {
     size = "lg";
-  } else if (width > 1920) {
+  } else {
     size = "xl";
   }
-
-  console.log(width, size);
 
   return size;
 };
@@ -39,30 +36,62 @@ const ReactResizeDetector = dynamic(() => import("react-resize-detector"), {
 });
 
 const Row = ({ style, children, ...props }) => {
-  // const Row = ({ style, children, ...props }: RowProps) => {
   const [size, setSize] = React.useState("xl");
   const container = React.useRef(null);
 
-  const updateColumns = async (width) => setSize(getSize(width));
-  // const updateColumns = async (width: number) => setSize(getSize(width));
+  const updateColumns = async (width) => setSize(getSize(width) ?? size);
 
   return (
     <ReactResizeDetector targetRef={container} handleWidth onResize={updateColumns}>
-      <View ref={container} style={[styles.row, style]}>
-        {React.Children.map(children, (child) => React.cloneElement(child, { ...props, size }))}
-      </View>
+  <View style={StyleSheet.flatten([styles.col, styles[`col_${props[size] ?? 12}`], style])}>{children}</View>
     </ReactResizeDetector>
   );
 };
 
+const colWidth = 100 / 12;
 const columnsMargin = 15;
 
 const styles = StyleSheet.flatten([
   {
-    row: {
-      flexDirection: "row",
-      flexWrap: "wrap",
-      marginRight: -columnsMargin,
+    col: {
+      paddingRight: columnsMargin,
+      paddingBottom: columnsMargin,
+    },
+    col_1: {
+      width: colWidth * 1 + "%",
+    },
+    col_2: {
+      width: colWidth * 2 + "%",
+    },
+    col_3: {
+      width: colWidth * 3 + "%",
+    },
+    col_4: {
+      width: colWidth * 4 + "%",
+    },
+    col_5: {
+      width: colWidth * 5 + "%",
+    },
+    col_6: {
+      width: colWidth * 6 + "%",
+    },
+    col_7: {
+      width: colWidth * 7 + "%",
+    },
+    col_8: {
+      width: colWidth * 8 + "%",
+    },
+    col_9: {
+      width: colWidth * 9 + "%",
+    },
+    col_10: {
+      width: colWidth * 10 + "%",
+    },
+    col_11: {
+      width: colWidth * 11 + "%",
+    },
+    col_12: {
+      width: colWidth * 12 + "%",
     },
   },
 ]);

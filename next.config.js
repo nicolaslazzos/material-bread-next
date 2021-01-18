@@ -5,7 +5,10 @@ const withTM = require("next-transpile-modules")([
   "react-native-vector-icons",
   "@react-native-community/toolbar-android",
   "react-native",
-  "@bit"
+  "react-native-easy-grid",
+  "react-native-responsive-grid",
+  "react-native-responsive-grid-system",
+  "react-native-responsive-grid-styles",
 ]);
 
 const withPlugins = require("next-compose-plugins");

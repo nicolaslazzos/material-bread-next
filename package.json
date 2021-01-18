@@ -19,10 +19,15 @@
     "react": "17.0.1",
     "react-dom": "^16.8.6",
     "react-native": "^0.63.3",
+    "react-native-easy-grid": "^0.2.2",
+    "react-native-responsive-grid": "^0.41.993",
+    "react-native-responsive-grid-system": "^1.0.4",
     "react-native-svg-web": "1.0.5",
     "react-native-vector-icons": "7.1.0",
     "react-native-web": "0.11.7",
-    "react-resize-detector": "^6.0.1-rc.1"
+    "react-resize-detector": "^6.0.1-rc.1",
+    "react-styled-flexboxgrid": "^3.2.1",
+    "styled-components": "^5.2.1"
   },
   "bit": {
     "env": {
