@@ -40,7 +40,7 @@ export const iconsMap = {
   logout: <MaterialIcon size={24} name="power-settings-new" />,
   home: <MaterialIcon size={24} name="home" />,
   link: <MaterialIcon size={24} name="link" />,
-  help: <MaterialIcon size={24} name="´help" />,
+  help: <MaterialIcon size={24} name="help" />,
   close: <MaterialIcon size={24} name="close" />,
   poweron: <MaterialCommunityIcon size={24} name="power-plug" />,
   poweroff: <MaterialCommunityIcon size={24} name="power-plug-off" />,

@@ -19,7 +19,10 @@ import Col from "../components/ColV2";
 import Row from "../components/Row";
 import Card from "../components/Card";
 import Button from "../components/Button";
+import ProgressBar from "../components/ProgressBar";
+import Snackbar from "../components/Snackbar";
 import { Avatar } from "../components/Avatar";
+import TextInput from "../components/text-input/TextInput";
 
 const styles = {
   container: {
@@ -128,6 +131,7 @@ export default class Page extends React.Component {
             </Text>
           </CardContent> */}
             <CardActions rightActionItems={[{ name: "thumb-up" }, { name: "share" }]} />
+            {i === 4 && <Snackbar />}
           </Card>
         </Col>
       ));
@@ -145,6 +149,7 @@ export default class Page extends React.Component {
           backLayerRevealed={backLayerRevealed}
           offset={260}
         >
+          <ProgressBar />
           <View style={{ flex: 1 }}>
             <Heading
               text={"Albums"}
@@ -154,6 +159,7 @@ export default class Page extends React.Component {
                 fontSize: 20,
               }}
             />
+            <TextInput label="Name" value="Nicolas Lazzos" />
             {/* <View style={{ flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
               <Button icon="close" text="Small" size="small" style={{ marginRight: 10 }} />
               <Button icon="close" text="Medium" style={{ marginRight: 10 }} />

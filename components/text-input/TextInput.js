@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TextInput as RNTextInput } from "react-native";
 
-import InputContainer from "./InputContainer";
+import InputContainer from "../input-container/InputContainer";
 
 export default function TextInput(props) {
   const mainColor = props.color || "#6f00ff";
@@ -63,5 +63,5 @@ export default function TextInput(props) {
 }
 
 const styles = {
-  textInputStyle: { height: 50, paddingHorizontal: 12, fontSize: 16, flex: 1, outline: 'none' },
+  textInputStyle: { height: 35, paddingHorizontal: 12, fontSize: 16, flex: 1, outline: "none" },
 };

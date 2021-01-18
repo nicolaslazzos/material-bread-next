@@ -74,7 +74,7 @@ export default function InputContainer(props) {
 
 const styles = {
   inputContainerStyle: { paddingVertical: 5, paddingTop: 9 },
-  inputBorderStyle: { flexDirection: "row", borderRadius: 4, marginBottom: 3, height: 51 },
+  inputBorderStyle: { flexDirection: "row", borderRadius: 4, marginBottom: 3, height: 40 },
   textStyle: { fontSize: 13, paddingHorizontal: 3, marginLeft: 6, marginRight: 6 },
   labelStyle: { position: "absolute", backgroundColor: "white", marginLeft: 9, marginRight: 9 },
   descriptionStyle: { color: "grey" },
