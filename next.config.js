@@ -3,12 +3,11 @@ const withTM = require("next-transpile-modules")([
   "material-bread",
   "react-native-svg",
   "react-native-vector-icons",
-  "@react-native-community/toolbar-android",
+  "react-native-material-ripple",
   "react-native",
-  "react-native-easy-grid",
-  "react-native-responsive-grid",
-  "react-native-responsive-grid-system",
-  "react-native-responsive-grid-styles",
+  "react-native-web",
+  "react-native-popup-menu",
+  "react-native-material-menu",
 ]);
 
 const withPlugins = require("next-compose-plugins");
@@ -22,8 +21,7 @@ let nextOptions = {
       ...(config.resolve.alias || {}),
       "react-native$": "react-native-web",
       "react-native-svg$": "react-native-svg-web",
-      "react-native/Libraries/Components/UnimplementedViews/UnimplementedView$":
-        "react-native-web/dist/modules/UnimplementedView",
+      "react-native-web/src": "react-native-web/dist",
     };
     return config;
   },
